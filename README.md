@@ -1,6 +1,6 @@
 # Lab 2: Login & To-Do Application
 
-A web-based Login and To-Do Management System developed using Flask and MySQL for the **Introduction to Database Systems** course at Alexandria National University. The application allows users to create accounts, log in securely, and manage their personal tasks.
+A web-based Login and To-Do Management System developed using Flask and MySQL for the **Introduction to Database Systems** course at Alexandria National University. The application allows users to register, log in securely, and manage their personal tasks.
 
 ## 👥 1. Team Members
 
@@ -27,9 +27,10 @@ A web-based Login and To-Do Management System developed using Flask and MySQL fo
 - Session-based authentication.
 - Protected pages for authenticated users.
 - Private task lists for each user.
-- Add, edit, and delete tasks.
+- Add new tasks.
+- Edit existing task titles.
 - Mark tasks as completed or incomplete.
-- Delete confirmation.
+- Delete tasks with confirmation.
 - Client-side and server-side input validation.
 - Maximum task title length of 200 characters.
 - Parameterized SQL queries to help prevent SQL injection.
@@ -75,7 +76,7 @@ pip install flask pymysql bcrypt python-dotenv
 ### Step 2 — Set Up the Database
 
 1. Open MySQL Workbench or your preferred MySQL client.
-2. Open `schema.sql`.
+2. Open the `schema.sql` file.
 3. Execute the SQL script to create the database and required tables.
 
 ### Step 3 — Configure Environment Variables
@@ -88,7 +89,7 @@ pip install flask pymysql bcrypt python-dotenv
 
 ### Step 4 — Run the Application
 
-From the project directory, run:
+Open a terminal in the project directory and run:
 
 ```bash
 python app.py
@@ -98,7 +99,7 @@ python app.py
 
 Open the following URL in your browser:
 
-**Registration page:** http://127.0.0.1:5000/register
+**Registration Page:** http://127.0.0.1:5000/register
 
 Register a new account, log in, and start managing your personal tasks.
 
@@ -106,17 +107,25 @@ Register a new account, log in, and start managing your personal tasks.
 
 ### 1. Registration Page
 
+Displays the user registration form and input validation.
+
 ![Registration Page](Screenshot%202026-10-12%20121621.png)
 
-### 2. Login Page
+### 2. To-Do List Management
 
-![Login Page](Screenshot%202026-10-12%20121837.png)
-
-### 3. To-Do List Management
+Displays the task management interface, including adding, editing, completing, and deleting tasks.
 
 ![To-Do List](Screenshot%202026-10-12%20121945.png)
 
+### 3. Login Page
+
+Displays the login form for existing users.
+
+![Login Page](Screenshot%202026-10-12%20121837.png)
+
 ### 4. Responsive Design
+
+Demonstrates the application's appearance in a phone-sized browser viewport.
 
 ![Responsive Design](Screenshot%202026-10-12%20122026.png)
 
@@ -124,7 +133,7 @@ Register a new account, log in, and start managing your personal tasks.
 
 ### A. Why do UPDATE and DELETE queries include `AND user_id = %s`?
 
-This condition ensures that users can update or delete only their own tasks. It prevents users from modifying another user's tasks by supplying a different task ID.
+This condition ensures that users can update or delete only their own tasks. It prevents a user from modifying another user's task by supplying a different task ID.
 
 ### B. What happens if a to-do references a nonexistent `user_id`?
 
