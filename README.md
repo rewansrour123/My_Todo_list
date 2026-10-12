@@ -111,13 +111,13 @@ Displays the user registration form and input validation.
 
 ![Registration Page](Screenshot%202026-10-12%20121621.png)
 
-### 2. To-Do List Management
+### 2. Login Page
 
 Displays the task management interface, including adding, editing, completing, and deleting tasks.
 
 ![To-Do List](Screenshot%202026-10-12%20121945.png)
 
-### 3. Login Page
+### 3. To-Do List Management
 
 Displays the login form for existing users.
 
